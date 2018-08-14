@@ -1,7 +1,7 @@
 # Movie-Recommendation-System
 
 This package consists of three folders: setup, databsets and Screenshots.
-Setup contains two folders: hadoop-2.9.0_configured and hive-2.1.1_configured,
+Setup contains two folders: hadoop-2.9.0 and hive-2.1.1,
 Databsets contains: movies.dat and ratings.dat,
 Screenshots contains some project screenshots.
 
@@ -27,8 +27,7 @@ $ ssh localhost
 $ exit
 ```
 
-Now extract hadoop-2.9.0_configured.tar.gz file on your local directory
-Move the extracted folder "hadoop-2.9.0" to /opt
+Move the folder "hadoop-2.9.0" to /opt
 
 ```
 $ sudo mv hadoop-2.9.0 /opt
@@ -76,8 +75,7 @@ That's it for installation of Hadoop in Pseudo-distributed mode.
 
 ## 2. Hive Installation:
 
-First we have to extract hive-2.1.1_configured.tar.gz on your local directory and
-then move to the location /opt
+First we have to move hive-2.1.1 folder to the location /opt
 This will be the installation directory for Hive.
 
 ```
