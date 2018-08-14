@@ -1,7 +1,7 @@
 # Movie-Recommendation-System
 
 This package consists of three folders: setup, databsets and Screenshots.
-Setup contains two .tar files: hadoop-2.9.0_configured.tar.gz and hive-2.1.1_configured.tar.gz,
+Setup contains two folders: hadoop-2.9.0_configured and hive-2.1.1_configured,
 Databsets contains: movies.dat and ratings.dat,
 Screenshots contains some project screenshots.
 
