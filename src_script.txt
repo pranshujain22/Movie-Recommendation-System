@@ -1,0 +1,46 @@
+create database movie_db;
+use movie_db;
+
+CREATE TABLE ratings_txt (
+  userid INT, 
+  movieid INT,
+  rating DOUBLE, 
+  tstamp STRING
+) STORED AS TEXTFILE;
+
+
+CREATE TABLE movies_txt (
+  movieid INT, 
+  title STRING,
+  genres ARRAY<STRING>
+) STORED AS TEXTFILE;;
+
+
+LOAD DATA LOCAL INPATH '/path/to/movies.txt' INTO TABLE ratings_txt;
+LOAD DATA LOCAL INPATH '/path/to/movies.txt' INTO TABLE movies_txt;
+
+CREATE TABLE ratings_orc (
+  userid INT, 
+  movieid INT,
+  rating DOUBLE, 
+  tstamp STRING
+) ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '#'
+STORED AS ORC tblproperties("compress.mode"="SNAPPY");
+
+CREATE TABLE movies_orc (
+  movieid INT, 
+  title STRING,
+  genres ARRAY<STRING>
+) ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '#'
+COLLECTION ITEMS TERMINATED BY "|"
+STORED AS ORC tblproperties("compress.mode"="SNAPPY");
+
+INSERT INTO TABLE ratings_orc SELECT * FROM ratings_txt;
+INSERT INTO TABLE movies_orc SELECT * FROM movies_txt;
+
+SELECT t.movieid as movieid, t.counts as rating_count, t.average as avg_rating, SUBSTRING(movies_orc.title, 1, 30) as movie_name, movies_orc.genres as genre FROM
+(SELECT movieid, count(rating) as counts, round(avg(rating), 2) as average FROM ratings_orc GROUP BY movieid SORT BY average DESC, counts DESC	) t JOIN movies_orc ON (t.movieid = movies_orc.movieid)
+WHERE counts > 10 AND array_contains(movies_orc.genres, 'Sci-Fi')
+limit 15;
