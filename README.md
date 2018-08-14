@@ -1,13 +1,5 @@
 # Movie-Recommendation-System
 
-This package consists of three folders: setup, databsets and Screenshots.
-
-Setup contains two folders: hadoop-2.9.0 and hive-2.1.1,
-
-Databsets contains: movies.dat and ratings.dat,
-
-Screenshots contains some project screenshots.
-
 ## 1. Hadoop Installation:
 
 Hadoop Prerequisites
@@ -30,7 +22,30 @@ $ ssh localhost
 $ exit
 ```
 
-Move the folder "hadoop-2.9.0" to /opt
+Download Apache Hadoop distribution from [official website](http://redrockdigimark.com/apachemirror/hadoop/common/hadoop-2.9.0/hadoop-2.9.0.tar.gz)
+
+Now extract hadoop-2.9.0.tar.gz file on your local directory
+
+```
+$ tar xvzf hadoop-2.9.0.tar.gz
+```
+
+Move the config folder files to hadoop-2.9.0/etc/hadoop/ folder.
+This contains all the pre-configured files required by the hadoop.
+(files are manually configured by the project team)
+
+These files are:
+
+> core-site.xml
+
+> hdfs-site.xml
+
+> mapred-site.xml
+
+> yarn-site.xml
+
+
+Now move the folder "hadoop-2.9.0" to /opt
 
 ```
 $ sudo mv hadoop-2.9.0 /opt
@@ -44,20 +59,6 @@ Goto the hadoop installation directory /opt/hadoop-2.9.0.
 $ cd /opt/hadoop-2.9.0
 ```
 
-this contains all the pre-configured files required by the hadoop.
-(files are manually configured by the project team)
-
-These files are located in /etc/hadoop folder in hadoop installation directory.
-
-> hadoop-env.sh
-
-> core-site.xml
-
-> hdfs-site.xml
-
-> mapred-site.xml
-
-> yarn-site.xml
 
 At this point, we are done with the configuration and are ready to get them started.
 
