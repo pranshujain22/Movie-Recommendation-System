@@ -154,6 +154,7 @@ That's it for Hive Installation.
 
 ## 3. Data preparation
 
+Download MovieLens dataset fron [GroupLens](http://files.grouplens.org/datasets/movielens/ml-10m.zip) and extract it.
 You can find two dat file in the archive folder datasets:
 
 > movies.dat, ratings.dat.
@@ -250,4 +251,3 @@ It's time to run the query for the top 15 movies of genre 'Sci-Fi':
 $ cd $HIVE_HOME
 $ bin/beeline -u jdbc:hive2:// -f /path/to/file/query.hql
 ```
-
