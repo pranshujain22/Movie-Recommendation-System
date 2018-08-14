@@ -10,9 +10,9 @@ Hadoop, Hive.
 
 ## 1. Hadoop Installation:
 
-Hadoop Prerequisites
+### Hadoop Prerequisites
 
-### Java 8 JDK installation:
+#### Java 8 JDK installation:
 
 ```
 $ sudo add-apt-repository ppa:webupd8team/java
@@ -20,7 +20,7 @@ $ sudo apt-get update
 $ sudo apt-get install oracle-java8-installer
 ```
 
-Passwordless SSH authentication:
+#### Passwordless SSH authentication:
 
 ```
 $ sudo apt-get install openssh-server
