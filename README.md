@@ -154,7 +154,9 @@ That's it for Hive Installation.
 
 ## 3. Data preparation
 
-Download MovieLens dataset fron [GroupLens](http://files.grouplens.org/datasets/movielens/ml-10m.zip) and extract it.
+Click [here](http://files.grouplens.org/datasets/movielens/ml-10m.zip) to download MovieLens dataset fron GroupLens.
+
+Extract it.
 You can find two dat file in the archive folder datasets:
 
 > movies.dat, ratings.dat.
