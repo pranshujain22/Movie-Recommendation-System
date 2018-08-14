@@ -163,7 +163,6 @@ Change column separator as follows:
 ```
 $ sed 's/::/#/g' movies.dat > movies.txt
 $ sed 's/::/#/g' ratings.dat > ratings.txt
-$ sed 's/::/#/g' users.dat > users.txt
 ```
 
 ## 4. Importing data as Hive tables
