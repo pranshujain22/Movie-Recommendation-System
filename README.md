@@ -1,8 +1,11 @@
 # Movie-Recommendation-System
 
 This package consists of three folders: setup, databsets and Screenshots.
+
 Setup contains two folders: hadoop-2.9.0 and hive-2.1.1,
+
 Databsets contains: movies.dat and ratings.dat,
+
 Screenshots contains some project screenshots.
 
 ## 1. Hadoop Installation:
