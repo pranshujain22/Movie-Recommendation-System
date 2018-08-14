@@ -115,8 +115,7 @@ $ source ~/.bashrc
 
 Goto the directory /conf and open up the file "hive-site.xml"
 
-> Replace all references to the system username with the username that you have on your machine.
-
+Replace all references to the system username with the username that you have on your machine.
 > i.e. replace "${system:user.name}" with "your_username" and save the file.
 
 Run some following commands to create directory for /temp and /warehouse for the Hive.
