@@ -30,7 +30,7 @@ Now extract hadoop-2.9.0.tar.gz file on your local directory
 $ tar xvzf hadoop-2.9.0.tar.gz
 ```
 
-Move the config folder files to hadoop-2.9.0/etc/hadoop/ folder.
+Move the **config** folder files to h**adoop-2.9.0/etc/hadoop/** folder.
 This contains all the pre-configured files required by the hadoop.
 (files are manually configured by the project team)
 
